@@ -1,0 +1,203 @@
+@import compass/css3
+@import compass/utilities
+
+= absolute($top, $right, $bottom, $left)
+  position: absolute
+  top: $top
+  left: $left
+  bottom: $bottom
+  right: $right
+
+= ir($name, $width, $height)
+  width: $width
+  height: 0
+  padding: $height 0 0 0
+  overflow: hidden
+  @extend .sprite-#{$name}
+
+
+= exo-100
+  &
+    font-weight: 100
+    font-family: 'helvetica neue', helvetica, arial, sans-serif
+  .wf-exo-n1-active &
+    font-family: exo
+
+= exo-400
+  &
+    font-weight: 400
+    font-family: 'helvetica neue', helvetica, arial, sans-serif
+  .wf-exo-n4-active &
+    font-family: exo
+
+/* ============================================================================
+ * Compass reset
+ * ============================================================================ */
+
+@import compass/reset
+
+/* ============================================================================
+ * Sprites
+ * ============================================================================ */
+
+@import sprite/*.png
++all-sprite-sprites
+
+/* ============================================================================
+ * Basics
+ * ============================================================================ */
+
+body
+  background: black
+  color: #eee
+  font-family: exo, sans-serif
+  font-size: 9pt
+  +exo-400
+  text-shadow: 0 0 2px rgba(black, 0.1)
+
+*
+  -webkit-backface-visibility: hidden
+
+/* ============================================================================
+ * Background
+ * ============================================================================ */
+
+.background
+  +absolute(0, 0, 0, 0)
+  z-index: 0
+  overflow: hidden
+
+/* ============================================================================
+ * Layout
+ * ============================================================================ */
+
+.info
+  +absolute(70px, auto, auto, 50px)
+.countdown
+  +absolute(auto, auto, 80px, 50px)
+
+
+/* ============================================================================
+ * Info box
+ * ============================================================================ */
+
+.info
+  z-index: 1
+
+  h1
+    +ir(graphika-manila, 155px, 74px)
+    margin-bottom: 60px
+
+  p
+    +ir(date-and-place, 280px, 73px)
+
+/* ============================================================================
+ * Countdown box
+ * ============================================================================ */
+
+.countdown
+  &
+    +pie-clearfix
+
+  // "See you in:"
+  h3
+    +exo-400
+    padding: 0 0 10px 0
+    margin: 0 0 10px 0
+    border-bottom: dotted 1px #333
+
+  // Each box
+  .box
+    &
+      float: left
+      position: relative
+      height: 130px
+
+    strong, small
+      position: absolute
+      left: 0
+      width: 100%
+
+    strong
+      top: 0
+      display: block
+      +transition(all 300ms ease)
+
+    small
+      bottom: 0
+      border-top: dotted 1px #333
+      padding-top: 10px
+      display: block
+      font-size: 7pt
+      text-transform: uppercase
+      letter-spacing: 1px
+
+  // Enter and exit!
+  .box strong.enter
+    +transform(translate(20px, 0) rotateX(10deg) perspective(500px))
+    opacity: 0
+
+  .box strong.exit
+    +transform(translate(-20px, 0) rotateX(-10deg) perspective(500px))
+    opacity: 0
+
+  // The big 'days' box
+  .box.days
+    width: 140px
+
+    strong
+      +exo-100
+      top: 3px
+      left: -5px
+      letter-spacing: -6px
+      font-size: 100px
+
+  // Other boxes
+  .box.hours, .box.minutes, .box.seconds
+    width: 75px
+
+    strong
+      +exo-400
+      font-size: 25px
+      top: 67px
+
+/* ============================================================================
+ * Share box
+ * ============================================================================ */
+
+.countdown .share
+  background: #eee
+  +absolute(48px, 0, auto, auto)
+  width: 75px * 3
+  height: 40px
+
+  +box-sizing(border-box)
+  padding: 10px
+
+  white-space: nowrap
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    left: -10px
+    bottom: 5px
+
+    border: solid 10px transparent
+    border-bottom-color: #eee
+
+  a
+    text-decoration: none
+    color: #eee
+    font-size: 9pt
+
+  // Twitter
+  iframe
+    position: relative
+    left: 5px
+    top: -1px
+
+  *
+    position: relative
+    z-index: 1
+    vertical-align: top

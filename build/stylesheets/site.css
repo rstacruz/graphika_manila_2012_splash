@@ -1,0 +1,72 @@
+/* ============================================================================ Compass reset ============================================================================ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+/* ============================================================================ Sprites ============================================================================ */
+.sprite-sprite, .sprite-date-and-place, .info p, .sprite-graphika-manila, .info h1 { background: url('../images/sprite-s1b449125a5.png') no-repeat; }
+
+.sprite-date-and-place, .info p { background-position: 0 0; }
+
+.sprite-graphika-manila, .info h1 { background-position: 0 -73px; }
+
+/* ============================================================================ Basics ============================================================================ */
+body { background: black; color: #eeeeee; font-family: exo, sans-serif; font-size: 9pt; text-shadow: 0 0 2px rgba(0, 0, 0, 0.1); }
+body { font-weight: 400; font-family: "helvetica neue", helvetica, arial, sans-serif; }
+.wf-exo-n4-active body { font-family: exo; }
+
+* { -webkit-backface-visibility: hidden; }
+
+/* ============================================================================ Background ============================================================================ */
+.background { position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index: 0; overflow: hidden; }
+
+/* ============================================================================ Layout ============================================================================ */
+.info { position: absolute; top: 70px; left: 50px; bottom: auto; right: auto; }
+
+.countdown { position: absolute; top: auto; left: 50px; bottom: 80px; right: auto; }
+
+/* ============================================================================ Info box ============================================================================ */
+.info { z-index: 1; }
+.info h1 { width: 155px; height: 0; padding: 74px 0 0 0; overflow: hidden; margin-bottom: 60px; }
+.info p { width: 280px; height: 0; padding: 73px 0 0 0; overflow: hidden; }
+
+/* ============================================================================ Countdown box ============================================================================ */
+.countdown { *zoom: 1; }
+.countdown:after { content: ""; display: table; clear: both; }
+.countdown h3 { padding: 0 0 10px 0; margin: 0 0 10px 0; border-bottom: dotted 1px #333333; }
+.countdown h3 { font-weight: 400; font-family: "helvetica neue", helvetica, arial, sans-serif; }
+.wf-exo-n4-active .countdown h3 { font-family: exo; }
+.countdown .box { float: left; position: relative; height: 130px; }
+.countdown .box strong, .countdown .box small { position: absolute; left: 0; width: 100%; }
+.countdown .box strong { top: 0; display: block; -webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease; }
+.countdown .box small { bottom: 0; border-top: dotted 1px #333333; padding-top: 10px; display: block; font-size: 7pt; text-transform: uppercase; letter-spacing: 1px; }
+.countdown .box strong.enter { -webkit-transform: translate(20px, 0) rotateX(10deg) perspective(500px); -moz-transform: translate(20px, 0) rotateX(10deg) perspective(500px); -ms-transform: translate(20px, 0) rotateX(10deg) perspective(500px); -o-transform: translate(20px, 0) rotateX(10deg) perspective(500px); transform: translate(20px, 0) rotateX(10deg) perspective(500px); opacity: 0; }
+.countdown .box strong.exit { -webkit-transform: translate(-20px, 0) rotateX(-10deg) perspective(500px); -moz-transform: translate(-20px, 0) rotateX(-10deg) perspective(500px); -ms-transform: translate(-20px, 0) rotateX(-10deg) perspective(500px); -o-transform: translate(-20px, 0) rotateX(-10deg) perspective(500px); transform: translate(-20px, 0) rotateX(-10deg) perspective(500px); opacity: 0; }
+.countdown .box.days { width: 140px; }
+.countdown .box.days strong { top: 3px; left: -5px; letter-spacing: -6px; font-size: 100px; }
+.countdown .box.days strong { font-weight: 100; font-family: "helvetica neue", helvetica, arial, sans-serif; }
+.wf-exo-n1-active .countdown .box.days strong { font-family: exo; }
+.countdown .box.hours, .countdown .box.minutes, .countdown .box.seconds { width: 75px; }
+.countdown .box.hours strong, .countdown .box.minutes strong, .countdown .box.seconds strong { font-size: 25px; top: 67px; }
+.countdown .box.hours strong, .countdown .box.minutes strong, .countdown .box.seconds strong { font-weight: 400; font-family: "helvetica neue", helvetica, arial, sans-serif; }
+.wf-exo-n4-active .countdown .box.hours strong, .wf-exo-n4-active .countdown .box.minutes strong, .wf-exo-n4-active .countdown .box.seconds strong { font-family: exo; }
+
+/* ============================================================================ Share box ============================================================================ */
+.countdown .share { background: #eeeeee; position: absolute; top: 48px; left: auto; bottom: auto; right: 0; width: 225px; height: 40px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 10px; white-space: nowrap; }
+.countdown .share:after { content: ""; display: block; position: absolute; left: -10px; bottom: 5px; border: solid 10px transparent; border-bottom-color: #eeeeee; }
+.countdown .share a { text-decoration: none; color: #eeeeee; font-size: 9pt; }
+.countdown .share iframe { position: relative; left: 5px; top: -1px; }
+.countdown .share * { position: relative; z-index: 1; vertical-align: top; }
