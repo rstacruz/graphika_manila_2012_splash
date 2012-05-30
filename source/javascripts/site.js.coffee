@@ -37,4 +37,17 @@ $('body').removeClass 'loading'
 $(window).resize onResize = ->
   $('body').toggleClass 'short', ($(window).height() < 550)
 
+  ratio = 16/10
+  $bg = $('.background')
+  $img = $bg.find('img')
+
+  d =
+    width: $bg.width()
+    height: $bg.height()
+
+  if d.width / d.height > ratio
+    $img.css width: d.width, height: d.width / ratio
+  else
+    $img.css width: d.height * ratio, height: d.height
+
 onResize()
