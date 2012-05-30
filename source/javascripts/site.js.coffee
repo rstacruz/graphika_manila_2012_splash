@@ -28,7 +28,12 @@ $('[data-countdown_until]').each ->
 
 # Call for entries toggle
 $('.call-for-entries, .entries-info .close').click ->
-  $('body').toggleClass 'entries-active'
+  if $('body').is('.entries-active')
+    $('body').removeClass 'entries-active'
+    document.location.hash = ''
+  else
+    $('body').addClass 'entries-active'
+    document.location.hash = '#call-for-entries'
 
 # Loading thingie
 $('body').removeClass 'loading'
@@ -51,3 +56,7 @@ $(window).resize onResize = ->
     $img.css width: d.height * ratio, height: d.height
 
 onResize()
+
+# Hash
+if window.location.hash is '#call-for-entries'
+  $('body').addClass 'entries-active'
