@@ -55,6 +55,9 @@ body
   +exo-400
   text-shadow: 0 0 2px rgba(black, 0.1)
 
+*
+  -webkit-backface-visibility: hidden
+
 /* ============================================================================
  * Background
  * ============================================================================ */
@@ -117,8 +120,8 @@ body
 
     strong
       top: 0
-      +exo-100
       display: block
+      +transition(all 300ms ease)
 
     small
       bottom: 0
@@ -129,11 +132,21 @@ body
       text-transform: uppercase
       letter-spacing: 1px
 
+  // Enter and exit!
+  .box strong.enter
+    +transform(translate(20px, 0) rotateX(10deg) perspective(500px))
+    opacity: 0
+
+  .box strong.exit
+    +transform(translate(-20px, 0) rotateX(-10deg) perspective(500px))
+    opacity: 0
+
   // The big 'days' box
   .box.days
     width: 140px
 
     strong
+      +exo-100
       top: 3px
       left: -5px
       letter-spacing: -6px
@@ -144,6 +157,7 @@ body
     width: 75px
 
     strong
+      +exo-400
       font-size: 25px
       top: 67px
 
