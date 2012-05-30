@@ -28,3 +28,8 @@ $('[data-countdown_until]').each ->
 
 $('.call-for-entries, .entries-info .close').click ->
   $('body').toggleClass 'entries-active'
+
+$(window).resize onResize = ->
+  $('body').toggleClass 'short', ($(window).height() < 550)
+
+onResize()

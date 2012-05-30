@@ -113,6 +113,10 @@ body, td, th, button, textarea
 .countdown
   +absolute(auto, auto, 80px, 50px)
 
+body.short
+  .countdown
+    opacity: 0
+
 
 /* ============================================================================
  * Info box
@@ -253,7 +257,7 @@ button.call-for-entries
   width: 200px
   text-align: left
 
-  +transition(background-color 100ms linear, top $speed $ease)
+  +transition(background-color 100ms linear, top ($speed * 0.5) $ease)
 
   strong
     display: block
@@ -284,7 +288,7 @@ body
     top: -450px
     +transition(top $speed $ease)
 
-  .info, .countdown,
+  .info, .countdown
     +transition(opacity $speed linear)
 
 body.entries-active
@@ -295,7 +299,7 @@ body.entries-active
     top: 0
 
   button.call-for-entries
-    top: 50px
+    top: 100px
 
 /* ============================================================================
  * Call for entries info
