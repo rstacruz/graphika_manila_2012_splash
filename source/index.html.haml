@@ -14,3 +14,28 @@
     %br
     Mall of Asia Complex, Pasay, Metro Manila
 
+%section.countdown
+  %h3 See you in:
+
+  .box.days
+    %strong 55
+    %small Days
+
+  .box.hours
+    %strong 08
+    %small Hours
+
+  .box.minutes
+    %strong 08
+    %small Minutes
+
+  .box.seconds
+    %strong 10
+    %small Seconds
+
+  .share
+    != "<a name='fb_share' type='button_count' share_url='http://www.graphikamanila.com/' href='http://www.facebook.com/sharer.php?u={INSERT ENCODED share_url HERE}&amp;src=sp' style='text-decoration: none; '></a>"
+    != "<script src='http://static.ak.fbcdn.net/connect.php/js/FB.Share' type='text/javascript'></script>"
+    != "<a href='https://twitter.com/share' class='twitter-share-button' data-text='Only 55 days to go!' data-via='graphikamanila'>Tweet</a>"
+    != '<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></script>'
+
