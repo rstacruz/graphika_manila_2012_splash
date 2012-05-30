@@ -26,9 +26,14 @@ $('[data-countdown_until]').each ->
           setTimeout next, 600
 
 
+# Call for entries toggle
 $('.call-for-entries, .entries-info .close').click ->
   $('body').toggleClass 'entries-active'
 
+# Loading thingie
+$('body').removeClass 'loading'
+
+# Responsivity
 $(window).resize onResize = ->
   $('body').toggleClass 'short', ($(window).height() < 550)
 
