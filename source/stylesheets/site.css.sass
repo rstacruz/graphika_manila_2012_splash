@@ -22,12 +22,8 @@ $ease: cubic-bezier(.06, .78, .07, .93)
   color: #333
   text-shadow: 0 0 2px rgba(white, 0.2)
 
-= armata-400
-  &
-    font-weight: 400
-    font-family: 'helvetica neue', helvetica, arial, sans-serif
-  .wf-exo-n1-active &
-    font-family: armata
+= sans
+  font-family: 'helvetica neue', helvetica, arial, sans-serif
 
 = exo-100
   &
@@ -90,7 +86,7 @@ body
 body, td, th, button, textarea
   font-size: 9pt
   line-height: 1.4
-  +armata-400
+  +sans
 
 *
   -webkit-backface-visibility: hidden
@@ -199,7 +195,7 @@ body.short
     width: 75px
 
     strong
-      +armata-400
+      +exo-400
       font-size: 25px
       top: 67px
 
