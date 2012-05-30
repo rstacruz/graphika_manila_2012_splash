@@ -39,3 +39,48 @@
     != "<a href='https://twitter.com/share' class='twitter-share-button' data-text='Only 55 days to go!' data-via='graphikamanila'>Tweet</a>"
     != '<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></script>'
 
+
+%button.call-for-entries
+  %strong Show us your work!
+  %span Now accepting entries for the Graphika Manila book.
+
+%section.entries-info
+  %button.close!= "&times;"
+  %header
+    %h2
+      %strong Graphika Manila Book
+      %span Call for entries
+
+  .column
+    %h3 Artwork Guidelines:
+
+    %p.guidelines
+      = image_tag 'guidelines.png', alt: '5 by 8 inches, 300dpi, 1/4 inch bleed, portait only'
+
+    %p.download
+      %strong CMYK only.
+      %span JPG, TIFF or PSD.
+      %a{href: 'template.psd'}
+        Download PSD template
+        &rarr;
+
+  .column
+    %h3 Criteria:
+
+    %p
+      All mediums accepted (Graphic Design, Illustration, Photography, Mixed Media, etc). New and unpublished works prefered. No particular theme required. Artworks must be all original and will remain the property of the artist. 
+
+    %p
+      All accepted submissions will receive a complimentary copy of the book, for pick up at Graphika Manila 2012.
+
+
+  .column
+    %h3 Submit now!
+
+    %p
+      Please ZIP artwork file and send together with your Name and URL to
+      %a{href: 'mailto:drew@graphikamanila.com'} drew (at) graphikamanila (dot) com.
+      You will be contacted if your artwork gets selected.
+
+    %p
+      Deadline for submission of artworks is on Friday, July 13, 2012.

@@ -25,3 +25,6 @@ $('[data-countdown_until]').each ->
 
           setTimeout next, 600
 
+
+$('.call-for-entries, .entries-info .close').click ->
+  $('body').toggleClass 'entries-active'
