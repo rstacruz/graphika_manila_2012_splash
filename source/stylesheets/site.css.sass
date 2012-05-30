@@ -1,0 +1,72 @@
+@import compass/css3
+@import compass/utilities
+
+= absolute($top, $right, $bottom, $left)
+  position: absolute
+  top: $top
+  left: $left
+  bottom: $bottom
+  right: $right
+
+= ir($name, $width, $height)
+  width: $width
+  height: 0
+  padding: $height 0 0 0
+  overflow: hidden
+  @extend .sprite-#{$name}
+
+
+= exo-400
+  &
+    font-weight: 400
+    font-family: 'helvetica neue', helvetica, arial, sans-serif
+
+  .wf-exo-n4-active &
+    font-family: exo
+
+/* ============================================================================
+ * Compass reset
+ * ============================================================================ */
+
+@import compass/reset
+
+/* ============================================================================
+ * Sprites
+ * ============================================================================ */
+
+@import sprite/*.png
++all-sprite-sprites
+
+/* ============================================================================
+ * Basics
+ * ============================================================================ */
+
+body
+  background: black
+  color: white
+  font-family: exo, sans-serif
+  +exo-400
+
+/* ============================================================================
+ * Background
+ * ============================================================================ */
+
+.background
+  +absolute(0, 0, 0, 0)
+  z-index: 0
+  overflow: hidden
+
+/* ============================================================================
+ * Info box
+ * ============================================================================ */
+
+.info
+  +absolute(70px, auto, auto, 50px)
+  z-index: 1
+
+  h1
+    +ir(graphika-manila, 155px, 74px)
+    margin-bottom: 100px
+
+  p
+    +ir(date-and-place, 280px, 73px)

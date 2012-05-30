@@ -8,30 +8,12 @@
 
     = stylesheet_link_tag "site.css"
 
-    -# Google Web font loader
-    :javascript
-      WebFontConfig = {
-        google: {
-          families: [
-            'Muli:400,700'
-          ]
-        }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })();
+    != webfonts google: { families: [ 'Exo:100,400' ] }
 
     = yield_content :head
 
-  %body{:class => page_classes}
-    #main{:role => "main"}
-      = yield_content :body
+  %body
+    = yield_content :body
 
     != "<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js'></script>"
     = javascript_include_tag 'site.js'
