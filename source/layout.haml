@@ -1,0 +1,60 @@
+- content_for :body do
+  -# ----------------------------------------------------------------------------
+  -# Top banner
+  -# ----------------------------------------------------------------------------
+
+  = partial 'partials/banner'
+
+  -# ----------------------------------------------------------------------------
+  -# Logo thing
+  -# ----------------------------------------------------------------------------
+
+  %header#top
+    %div
+      .logo
+        %a{href: '/'}
+          %img{src: '/images/tastecentral.png'}
+
+      = partial 'partials/user_links'
+
+      %nav.search
+        %form
+          %input{type: 'text', placeholder: 'Search Product'}
+          %button Go
+
+  -# ----------------------------------------------------------------------------
+  -# Menu
+  -# ----------------------------------------------------------------------------
+
+  %nav#menu
+    %div
+      %ul
+        %li
+          %a.more{href: '#'} Shop
+        %li
+          %a{href: '#'} Fashion
+        %li
+          %a.active{href: '#'} Home
+        %li
+          %a{href: '#'} Food
+        %li
+          %a{href: '#'} Wishlist
+        %li
+          %a{href: '#'} Gifts
+        %li
+          %a{href: '#'} Taste Report
+        %li
+          %a{href: '#'} Dealgrocer
+
+  = yield_content :menu
+
+  #content
+    = yield
+
+  -# ----------------------------------------------------------------------------
+  -# Footer
+  -# ----------------------------------------------------------------------------
+
+  = partial 'partials/footer'
+
+= partial 'layouts/core'
