@@ -7,3 +7,4 @@ Heroku deployment
 -----------------
 
     $ heroku create --stack cedar --buildpack http://github.com/indirect/heroku-buildpack-middleman.git
+
