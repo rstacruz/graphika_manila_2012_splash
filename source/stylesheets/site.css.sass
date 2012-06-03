@@ -46,6 +46,13 @@ $ease: cubic-bezier(.06, .78, .07, .93)
   .wf-exo-n7-active &
     font-family: exo
 
+= armata-400
+  &
+    font-weight: 400
+    font-family: 'helvetica neue', helvetica, arial, sans-serif
+  .wf-armata-n4-active &
+    font-family: armata
+
 = content
   a
     color: #888
@@ -127,6 +134,7 @@ body.short
     +ir(graphika-manila, 155px, 74px)
     margin-bottom: 60px
 
+.info
   p
     line-height: 1.1
     +exo-700
@@ -135,10 +143,26 @@ body.short
     margin-bottom: 20px
 
   p small
-    +exo-400
+    +armata-400
     font-size: 8pt
-    letter-spacing: 1px
     text-transform: none
+    color: #aaa
+
+.teaser
+  +absolute(auto, 0, 70px, auto)
+  z-index: 1
+
+  p
+    +armata-400
+    font-size: 9pt
+    text-shadow: 0 0 3px rgba(black, 0.2), 1px 1px 0 rgba(black, 0.8)
+    text-transform: none
+
+    text-align: right
+    display: inline
+    background: rgba(black, 0.8)
+    padding: 6px 8px
+    padding-right: 50px
 
 /* ============================================================================
  * Countdown box
