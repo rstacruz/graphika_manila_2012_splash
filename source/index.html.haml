@@ -1,3 +1,6 @@
+- content_for :comment do
+  != "<!--\n#{File.read 'source/humans.txt'}\n-->"
+
 - content_for :head do
   %title Graphika Manila 2012 - Call for Entries
   %meta{name: 'description', content: 'Show us your work! We are now accepting entries for the Graphika Manila 2012 book.'}
@@ -82,7 +85,7 @@
     %h3 Criteria:
 
     %p
-      All mediums accepted (Graphic Design, Illustration, Photography, Mixed Media, etc). New and unpublished works prefered. No particular theme required. Artworks must be all original and will remain the property of the artist. 
+      All mediums accepted (Graphic Design, Illustration, Photography, Mixed Media, etc). New and unpublished works prefered. No particular theme required. Artworks must be all original and will remain the property of the artist.
 
     %p
       All accepted submissions will receive a complimentary copy of the book, for pick up at Graphika Manila 2012.
