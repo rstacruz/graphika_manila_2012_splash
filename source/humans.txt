@@ -1,14 +1,9 @@
-     _______   .___  ___.    ______ ______ ____   ______
-    /  _____| /   |/    |   |__    |      |_   | |__    |
-   |  |  ___ /  /|  /|  |   |    __|  --  |_|  |_|    __|
-   |  | |_  /  / | / |  |   |______|______|______|______|
-   |  |__| /  /  '/  |  |
-    \____ /__/       |__|
-
-Hello! We built this!
-
-Design by Plus63.
-- plus63.net - twitter @danmatutina -
-
-Implemented by Nadarei.
-- nadarei.co - twitter @rstacruz - ricostacruz.com - michaelgalero.com -
+   _______   ___   ____
+  /  _____\/    |/     |     Hello! We made this!
+ |  | __  /  /| / / |  |   
+ |  |__| /  / |  /  |  |     Design by Plus63 (plus63.net)
+  \____ /  /  '_/   |__|     twitter @danmatutina / www: twistedfork.me
+       /  /                
+      /__/   2  0  1  2      Development by Nadarei (nadarei.co)
+                             twitter: @rstacruz / www: ricostacruz.com
+                             www: michaelgalero.com
